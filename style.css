@@ -1,0 +1,205 @@
+/* MAIN STYLING */
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/bakkerij.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    letter-spacing: 0.2em;
+    font-size: 17px;
+    font-family: 'Comfortaa', cursive;
+    box-sizing: border-box;
+}
+
+header, main, footer {
+    width: 800px;
+    margin: 0 auto;
+}
+
+a {
+    color:#fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+
+/* HEADER */
+
+header {
+    font-family: 'Parisienne' , cursive;
+    font-size: 30px;
+    color: #fff;
+    
+    text-align: center;
+    height: 120px;
+}
+
+header h1 {
+    letter-spacing: 0.5em;
+    word-spacing: 1em;
+    margin: 0;
+}
+header h2 {
+    margin: -20px 0 0 0;
+    letter-spacing: 1.5em;
+}
+header:hover {
+    font-size: 1.8em;
+}
+
+
+/* MAIN */
+
+main {
+    background-color: rgba(46, 45, 45, 0.8);
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+/* FORM STYLING */
+
+.intro {
+    padding:20px 10px 0 40px;
+    margin-bottom: 0;
+}
+
+.sub-intro {
+    margin: 0 15px;
+}
+
+abbr, .verplicht-uitleg {
+    text-decoration: none;
+    color:#fc3503;
+    margin: 0;
+    padding: 0;
+}
+
+.verplicht-uitleg {
+    text-align: right;
+    margin: -15px 16px 30px 0;
+    font-size: 0.7em;
+}
+
+fieldset {
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 0 10px 30px 20px;
+}
+
+legend {
+    text-align: right;
+    font-family: 'Parisienne' , cursive;
+    letter-spacing: 0.8em;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin: 30px 0 15px 0;
+}
+
+input {
+    margin-left: 50px;
+    height: 1.8em;
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px rgb(204, 204, 204);
+}
+
+.opt-select {
+    width: 130px;
+}
+
+input[type=radio], input[type=checkbox]{
+   width: auto;
+   vertical-align: middle;
+   box-shadow: none;
+
+}
+
+.opt-select[type=color] {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    padding: 0;
+}
+
+.opt-group p {
+    margin: 25px 0 15px 0;
+}
+
+.opt-group label {
+    margin: 0;
+}
+
+textarea {
+    width: 60%;
+    max-width: 610px;
+    height: 175px;
+    margin-left: 50px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(204, 204, 204);
+}
+
+input[type=file] {
+    font-size: 1em;
+    box-shadow: none;
+}
+
+
+.confirm {
+    border: none;
+}
+
+.confirm input{
+    margin: 0;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn {
+    height: 40px;
+    width: 180px;
+    margin: 0 15px 0 15px;
+    border: none;
+    border-radius: 10px;
+    opacity: 0.6;
+    font-size: 1.2em;
+}
+
+button[type=reset] {
+    background-color: #fc3503;
+}
+
+button[type=submit] {
+    background-color: #77fa4b;
+}
+
+button:hover {
+    opacity: 1;
+    box-shadow:0px 0px 100px #999;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: rgba(46, 45, 45, 0.8);
+    border-radius: 20px;
+    text-align: center;
+    color:#cbc;
+    padding: 10px;
+}

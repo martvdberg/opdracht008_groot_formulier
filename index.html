@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Meld je recept aan!</title>
+</head>
+
+<body>
+    <header>
+        <h1>Chef's special</h1>
+        <h2>recepten</h2>
+    </header>
+
+    <main>
+        <form name="recept" method="POST" data-netlify="true">
+            <h1 class="intro">Voeg je eigen recept toe!</h1>
+            <p class="sub-intro intro">Vul het formulier in om je eigen recept toe te voegen aan de website.</p>
+            <p class="verplicht-uitleg sub-intro">Velden met een <abbr title="verplicht">*</abbr> zijn verplicht</p>
+
+            <fieldset>
+                <legend>Persoonlijke informatie</legend>
+                <label for="naam">
+                    <span>Naam</span>
+                    <abbr title="verplicht">*</abbr>
+                </label>
+                <input type="text" id="naam" name="Naam" required>
+
+                <label for="mail">
+                    <span>Email</span>
+                    <abbr title="verplicht">*</abbr>
+                </label>
+                <input type="email" id="mail" name="Email" required>
+
+                <label for="telnr">
+                    <span>Telefoon nummer</span>
+                    <abbr title="verplicht">*</abbr>
+                </label>
+                <input type="tel" id="telnr" name="telefoon" required>
+
+                <label for="leeftijd">
+                    <span>Leeftijd</span>
+                    <abbr title="verplicht">*</abbr>
+                </label>
+                <input type="number" id="leeftijd" class="opt-select" name="leeftijd" min="0" required>
+
+                <label for="geboortedatum">
+                    <span>Geboorte datum</span>
+                </label>
+                <input type="date" id="geboortedatum" class="opt-select" name="geboortedatum">
+
+                <!-- Om bij netlify tot een goed resultaat te komen kan je geen for atribuut aan het label element mee gegeven.
+            DOe je dit wel slaat hij niet de waarde van name op maar van het eerste id. -->
+                <div class="opt-group">
+                    <p>Gender</p>
+                    <label>
+                        <input type="radio" name="gender" value="man">
+                        <span>man</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="vrouw">
+                        <span>vrouw</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="overig" checked>
+                        <span>overig</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- om het goed in netlify te laten werken zijn er bij meerdere checkbox inputs in 1 groep de [] tekens nodig in
+            het naam atribuut (dit maakt er een array van tijdens het opslaan. anders wordt alleen de laatst gekozen
+            optie opgeslagen) -->
+            <fieldset>
+                <legend>Overige informatie</legend>
+                <div class="opt-group">
+                    <p>Favoriete cuisine</p>
+                    <label>
+                        <input type="checkbox" name="fav-cuisine[]" value="frans">
+                        <span>Frans</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="fav-cuisine[]" value="italiaans">
+                        <span>Italiaans</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="fav-cuisine[]" value="spaans">
+                        <span>Spaans</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="fav-cuisine[]" value="arabisch">
+                        <span>Arabisch</span>
+                    </label>
+                </div>
+                <label for="fav-kleur">
+                    <span>Favoriete kleur</span>
+                </label>
+                <input type="color" id="fav-kleur" class="opt-select" name="fav-kleur" value="#ff1975">
+
+                <label for="bio">
+                    <span>Biografie</span>
+                </label>
+                <textarea id="bio" name="biografie"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Upload & weblink</legend>
+                <label for="upload-recept">
+                    <span>Upload hier je recept</span>
+                </label>
+                <input type="file" id="uplaod-recept" name="upload-recept">
+
+                <label for="link-website">
+                    <span>Voeg je website toe</span>
+                </label>
+                <input type="url" id="link-website" name="link-website">
+            </fieldset>
+
+            <fieldset class="confirm">
+                <label>
+                    <input type="checkbox" name="akkoord-voorwaarden" required>
+                    <span>Ik ga akkoord met de <a href="#">voorwaarden</a></span>
+                    <abbr title="verplicht">*</abbr>
+                </label>
+
+                <div class="btn-container">
+                    <button type="reset" class="btn">Reset</button>
+                    <button type="submit" class="btn">Voeg toe</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora illo alias, ullam asperiores
+            pariatur quis, deserunt optio quos exercitationem corporis temporibus aspernatur? Qui, quos commodi nostrum
+            perspiciatis dolorem officia.</p>
+    </footer>
+</body>
+
+</html>
